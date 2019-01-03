@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>详情页</title>
+	<link rel="stylesheet" type="text/css" href="css/indexstyle.css">
+	<script type="text/javascript" src="js/am.js"></script>
+	<style type="text/css">
+		li{
+			list-style: none;
+		}
+		#slider{
+			width:150px;
+			height:150px;
+			position:absolute;
+			background:#ccc;
+			opacity:0.4;
+			cursor: move;
+			display:none; 
+			filter:alpha(opacity=40);
+		}
+		#Bimg{
+			position:absolute;
+			left:0;
+			top:0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div  id="cover">
+			<!-- 最上一层 -->
+			<div class="top">
+				<div class="top_left">
+					<a href="#">帮5买，享帮帮</a>
+				</div>
+				<div class="top_right">
+					<a class="lo" style="width:19px;height:19px;background: url(images/common_min.png) 0px -31px;" href="#">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+					<a class="lo" style="width:19px;height:19px;background: url(images/common_min.png) 0px -53px;" href="#">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+					<a class="lo" style="width:19px;height:19px;background: url(images/common_min.png) 0px -75px;" href="#">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+					<a href="#" class="lo">登录</a>
+					<a href="#" class="lo">注册</a>
+					<a href="#" style="width:24px;padding-left: 18px;background: url(images/common_min.png) -4px -113px no-repeat;">消息</a>
+					<a href="#" style="background: url(images/dingdan.jpg) no-repeat 0 2px;padding-left: 17px;">我的订单</a>
+					<a href="#" class="lo">我的收藏</a> 
+					<a href="#" class="lo">帮钻兑换</a>
+					<a href="#" class="lo" style="background: url(images/tp-my-phone.png) no-repeat 0 2px;padding-left: 12px;">手机版</a>
+					<a href="#" class="lo">帮5淘</a>
+					<a href="#" class="lo">客户服务</a>
+					<a href="#" class="lo" style="background: url(images/gouwuche.jpg) no-repeat -2px 2px;padding-left: 17px;">购物车</a> 
+				</div>
+			</div>
+			<!-- 内容第一块 -->
+			<div class="first">
+				<img class="first_left" src="images/logo_03.jpg"/>
+				<div class="first_middle">
+					<input type="text" style="width: 500px;height: 38px;border:#fe6c00;margin: 0;" placeholder="输入商品网址或关键词，直通全网，快速帮5购！"/>
+					<input type="button" style="width: 85px;height: 40px;border:#fe6c00;background:#fe6c00;margin-left:-5px;color: #fff;" value="搜全网"/>
+					<ul style="list-style: none;padding-top: 9px;font-size: 12px;padding-left: 10px;margin: 0 auto;">
+						<li style="float: left;border-right: 1px solid #ccc;padding: 0 8px 0 0;margin: 0;">
+							<a href="#" style="color: #ff0000;">洗发护发</a>
+						</li>
+						<li class="row"><a href="#" style="color: #ff0000;">日本纸尿裤</a></li>
+						<li class="row"><a href="#">身体乳</a></li>
+						<li class="row"><a href="#">内衣文胸</a></li>
+						<li class="row"><a href="#" style="color: #aca9d3;">iPhone6s</a></li>
+						<li class="row"><a href="#" style="color: #aca9d3">iPad Air2</a></li>
+						<li class="row"><a href="#">牛仔裤</a></li>
+						<li class="row"><a href="#">奶粉</a></li>
+						<li class="row"><a href="#">防晒霜</a></li>
+						<li style="float: left;padding: 0 0 0 8px;"><a href="#">伞</a></li>
+					</ul>
+				</div>
+				<div class="first_right">
+					<div class="number">
+						<div style="width:85px;height:15px;margin-top:5px;margin-bottom:5px;background: url(images/common_min.png) -4px -97px no-repeat;background-position:center center">
+						</div>
+						<a href="#" style="width:85px;font-size:12px;margin:0;">400-085-0505</a>
+					</div>
+					<div class="number">
+						<div style="width:85px;height:15px;margin-top:5px;margin-bottom:5px;background: url(images/letter.png) no-repeat;background-position:center center">
+						</div>
+						<a href="#" style="width:85px;font-size:12px;margin:0;">mc@b5m.com</a>
+					</div>
+					<div class="number" style="background-color:#fe6c00;">
+						<a href="#" style="background: url(images/wenhao.jpg) no-repeat 0 2px;padding-left: 15px;line-height:38px;font-size:13px;color: #fff;">常见问题</a> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 黑色目录栏 -->
+		<div class="return">
+			<ul>
+				<li class="return_choose"><a href="index.html">首页</a></li>
+				<li class="return_choose"><a href="#">热门品牌</a></li>
+				<li class="return_choose"><a href="#">美妆个护</a></li>
+				<li class="return_choose"><a href="#">服饰鞋包</a></li>
+				<li class="return_choose"><a href="#">母婴生活</a></li>
+				<li class="return_choose"><a href="#">食品保健</a></li>
+				<li class="return_choose"><a href="#">韩国首都</a></li>
+				<li class="return_choose"><a href="#">跨境购</a></li>
+				<li style="float: left;margin-left:24px;"><img src="images/ff_03.jpg"/></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 中间灰色区 -->
+	<div class="detial_middle">
+		<div style="width: 1180px;height: 38px;margin:0 auto;padding: 0;">
+			<p style="line-height: 38px;float: left;font-size: 15px;margin:0;padding: 0;">首页>美容护肤/美体/精油>防晒>韩国 RE:CIPE 水晶清爽防水防晒喷雾SPF50 150ml/瓶</p>
+		</div>
+		<div style="width: 1180px;height: 633px;margin: 0 auto;">
+			<div style="width: 997px;height: 633px;float: left;background-color: #fff;">
+				<div class="white_left">
+					<div id="bottle">
+						<img src="images/pp0.jpeg"/>
+						<div id="slider"></div>
+					</div>
+					<div class="road">
+						<img style="float: left;" src="images/spanl.jpg">
+						<img id="yellow" style="float: left;" src="images/sp0.jpeg"/>
+						<img id="blue" style="float: left;" src="images/sp1.jpeg"/>
+						<img style="float: right;" src="images/spanr.jpg"/>
+					</div>
+				</div>
+				<div id="lost">
+					<img width="816" height="816" src="images/pp0.jpeg" id="Bimg">
+				</div>
+				<!--灰色区的文字区 -->
+				<div class="white_right">
+					<div class="letters">
+						<p style="font-size: 16px;font-weight: bold;margin:0;line-height: 25px;">韩国 RE:CIPE 水晶清爽防水防晒喷雾SPF50 150ml/瓶</p>
+						<p style="color: #666577;font-size: 13px;margin:0;line-height: 20px;">【限购3件】超透明无痕防晒，防水防汗定妆，保温降温不黏腻，水晶防晒喷雾，喷后皮肤水润，不油，不留白，更不会像防晒霜那样抹不开，非常实用，开始存货吧。</p>
+						<p style="font-size: 13px;line-height: 43px;margin-left: 20px;">价格
+							<span style="font-size: 17px;color: #fe0e4e;margin:0 15px 0 45px;">¥71</span>
+							<span style="text-decoration: line-through;">¥150</span>
+						</p>
+						<p style="font-size: 13px;margin-left: 20px;">发货
+							<span style="font-size: 14px;margin:0 20px 0 20px;">国内保税仓（包邮）</span>
+							<span>3-7天</span>
+						</p>
+					</div>
+					<div style="width: 502px;height: 45px;background-color: #f7f6f5;float: left;">
+						<img style="margin:15px 0 0 20px;" src="images/push_03.png"/>
+					</div>
+					<div class="void">
+						<div style="width: 340px;height: 70px;margin-left: 20px;float: left;">
+							<p style="font-size: 13px;line-height: 70px;float: left;">化妆品净含量</p>
+							<div id="five">150ml</div>
+							<div id="ten">200ml</div>
+						</div>
+						<div class="up">
+							<p style="float: left;">数量</p>
+							<div style="width: 130px;height: 35px;float: left;margin-left: 65px">
+								<button id="minusnum">-</button>
+								<input id="changenum" type="text" name="number" value="1">
+								<button id="addnum">+</button>
+							</div>
+							<p id="keep" style="float: left;margin-left: 40px">件（库存5件）</p>
+						</div>
+						<p style="font-size: 13px;line-height: 43px;margin-left: 20px;float: left;width: 340px;">销量
+							<span style="font-size: 17px;color: #fe0e4e;margin:0 15px 0 55px;">81</span>件
+						</p>
+						<p style="float: left;margin-left: 100px;">您已选择 <span id="ml"></span></p>
+					</div>
+					<input class="buy" style="color: #ff0754;background-color: #fff;margin-top: 20px" type="button" name="buy" value="立即购买">
+					<input class="buy" id="buy" style="background-color:#ff0754;color: #fff;margin-top: 20px" type="button" name="buy" value="加入购物车">
+					<div id="rush">
+						<div class="rush_choose">
+							<button style="margin:  10px 0 0 370px;background-color: #fff;border:#fff;" id="rush_x">X</button>
+							<img src="images/rr11_02.jpg">
+							<div style="height: 42px;padding: 16px 0 0  30px;">
+								<button id='rush_one' style="background-color: white;">继续购物</button>
+								<button id='rush_two' style="background-color: #ff0754;color: white;margin-left: 20px;">去购物车结算</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="width: 180px;float: right;height: 633px;">
+				<img src="images/ww_07.jpg"/>
+			</div>
+		</div>
+		<div style="width: 100%;height: 108px;padding: 0;margin:0 auto;background-color: #f6f5f4;text-align: center;">
+			<img style="margin:0;" src="images/a_07.jpg"/>
+		</div>
+	</div>
+	<div class="fourth">
+			<div class="fourth_left">
+				<img style="float: left;" src="images/loginB.jpg">
+			</div>
+			<div class="fourth_middle">
+				<ul class="more">
+					<li class="miss">购物指南</li>
+					<li class="lose"><a href="#">如何下单</a></li>
+					<li class="lose"><a href="#">帮5购流程</a></li>
+					<li class="lose"><a href="#">订单查询</a></li>
+					<li class="lose"><a href="#">物流配送</a></li>
+				</ul>
+				<ul class="more">
+					<li class="miss">支付相关</li>
+					<li class="lose"><a href="#">支付方式</a></li>
+					<li class="lose"><a href="#">安全设置</a></li>
+					<li class="lose"><a href="#">账户信息</a></li>
+				</ul>
+				<ul class="more">
+					<li class="miss">售后服务</li>
+					<li class="lose"><a href="#">取消订单</a></li>
+					<li class="lose"><a href="#">申请售后</a></li>
+					<li class="lose"><a href="#">退货流程</a></li>
+					<li class="lose"><a href="#">退款相关</a></li>
+				</ul>
+				<ul class="more">
+					<li class="miss">VIP服务</li>
+					<li class="lose"><a href="#">VIP优惠</a></li>
+					<li class="lose"><a href="#">如何成为VIP</a></li>
+					<li class="lose"><a href="#">超级帮钻</a></li>
+				</ul>
+				<ul class="more">
+					<li class="miss">帮韩品</li>
+					<li class="lose"><a href="#">韩国正品</a></li>
+					<li class="lose"><a href="#">闪电发货</a></li>
+					<li class="lose"><a href="#">帮韩品售后</a></li>
+				</ul>
+				<ul class="more">
+					<li class="miss">更多</li>
+					<li class="lose"><a href="#">手机APP</a></li>
+					<li class="lose"><a href="#">帮5采APP</a></li>
+					<li class="lose"><a href="#">帮5淘插件</a></li>
+					<li class="lose"><a href="#">其他</a></li>
+				</ul>	
+			</div>
+			<div class="fourth_right">
+				<img src="images/erweima.jpg">
+			</div>
+		</div>
+		<!-- 内容第五块 -->
+		<div class="fifth">
+			<ul style="width: 700px;margin: 0 auto;">
+				<li style="width: 65px;float: left; text-align: center;list-style: none;font-size: 12px;"><a style="color:#666560; href="#">关于帮5买</a></li>
+				<li class="line"><a href="#">联系我们</a></li>
+				<li class="line"><a href="#">合作商家</a></li>
+				<li class="line"><a href="#">友情链接</a></li>
+				<li class="line"><a href="#">加入我们</a></li>
+				<li class="line"><a href="#">移动应用</a></li>
+				<li class="line"><a href="#">热门</a></li>
+				<li class="line"><a href="#">广告联盟</a></li>
+				<li class="line"><a href="#">使用条款</a></li>
+			</ul>
+			<div class="last" style="width: 500px; margin: 0 auto;">Copyright © 20112015 B5M.COM. All nghts reserved. Powered by B5Msoft Co,Ltd.</div>
+			<ul class="last" style="width: 1075px;margin: 0 auto;">
+				<li class="finally" style="border-right: 1px solid #9a9791;">增值电信业务经营许可证:沪B2-20130065号</li>
+				<li class="finally" style="border-right: 1px solid #9a9791;">中华人民共和国互联网药品信息服务资格证书(沪)非经营性-2013-0034沪卫(中医)网审[2015] 10032号沪ICP备11034776号-3 </li>
+				<li class="finally" style="font-size: 12px;">食品流通许可证:</li>
+			</ul>
+			<p style="font-size: 12px;margin-bottom: 5px;">SP310115140301755</p>
+		</div>
+		<!-- 最底下的图片 -->
+		<div class="bottom">
+			<div class="bottom_middle">
+				<img class="over" src="images/bo1.gif"/>
+				<img class="over" src="images/bo2.png"/>
+				<img class="over" src="images/bo3.gif"/>
+				<img class="over" src="images/bo4.png"/>
+				<img class="over" src="images/bo5.png"/>
+				<img class="over" src="images/bo6.png"/>
+				<img class="over" src="images/bo7.png"/>
+			</div>
+		</div>
+	<script type="text/javascript">
+		/*顶部悬浮*/
+		window.onload=function(){
+			var cover=document.getElementById('cover');
+			window.onscroll=function(){
+				var st=document.documentElement.scrollTop || document.body.scrollTop;
+				if(st>180){
+					cover.style.position='fixed';
+				}else{
+					cover.style.position='static';
+				}
+			}
+		}
+		var bottle=document.getElementById('bottle');
+		var yellow=document.getElementById('yellow');
+		var blue=document.getElementById('blue');
+		var Bimg=document.getElementById('Bimg');
+		yellow.onclick=function exchange(){
+			yellow.style.border='solid 2px #ff9003';
+			blue.style.border='';
+			bottle.innerHTML="";
+			var img=document.createElement('img');
+			img.src="images/pp0.jpeg";
+			bottle.appendChild(img);
+			Bimg.src='images/pp0.jpeg';
+		}
+		blue.onclick=function again(){
+			blue.style.border='solid 2px #ff9003';
+			yellow.style.border='';
+			bottle.innerHTML="";
+			var img=document.createElement('img');
+			img.src="images/pp1.jpeg";
+			bottle.appendChild(img);
+			Bimg.src='images/pp1.jpeg';
+		}
+		/*化妆品规格*/
+		var litter=document.getElementById('five');
+		var most=document.getElementById('ten');
+		var ml=document.getElementById('ml');
+		litter.onclick=function border(){
+			ml.innerHTML='';
+			litter.style.border='2px solid #fe0d4a';
+			litter.style.background='url(images/duigou.png) no-repeat right bottom';
+			most.style.border='';
+			most.style.background="";
+			var ok=document.createTextNode('"150ml"');
+	        ml.appendChild(ok);
+		}
+		most.onclick=function border(){
+			ml.innerHTML='';
+			most.style.border='2px solid #fe0d4a';
+			most.style.background='url(images/duigou.png) no-repeat right bottom';
+			litter.style.border='';
+			litter.style.background="";
+			var ok=document.createTextNode('"200ml"');
+	        ml.appendChild(ok);
+		}
+		/*放大镜*/
+		var bottle=document.getElementById('bottle');
+		var slider=document.getElementById('slider');
+		var lost=document.getElementById('lost');
+		bottle.onmouseover=function(){
+			slider.style.display='block';
+			lost.style.display='block';
+		}
+		bottle.onmouseout=function(){
+			slider.style.display='none';
+			lost.style.display='none';
+		}
+		bottle.onmousemove=function(ev){
+			var oL=ev.clientX-bottle.offsetLeft-slider.offsetWidth/2;
+			var oT=ev.clientY-bottle.offsetTop-slider.offsetHeight/2;
+			var oMaxw=bottle.offsetWidth-slider.offsetWidth;
+			var oMaxh=bottle.offsetHeight-slider.offsetHeight;
+			oL=oL>oMaxw?oMaxw:oL<0?0:oL;
+			oT=oT>oMaxh?oMaxh:oT<0?0:oT;
+			var x=ev.clientX-slider.offsetWidth/2;
+			var y=ev.clientY+slider.offsetHeight/2;
+			if(x<100){
+				x=100;
+			}else if(x>380){
+				x=380;
+			}
+			if(y<100){
+				y=100;
+			}else if(y>520){
+				y=520;
+			}
+			slider.style.left=x+'px';
+			slider.style.top=y+'px';
+			var scale=-Bimg.offsetHeight/bottle.offsetHeight;
+			Bimg.style.left=oL*scale+'px';
+			Bimg.style.top=oT*scale+'px';
+		}
+		/*加购后弹出框*/
+		var buy=document.getElementById('buy');
+	    var rush=document.getElementById('rush');
+	    var rush_x=document.getElementById('rush_x');
+	   	var rush_one=document.getElementById('rush_one');
+	   	var rush_two=document.getElementById('rush_two');
+	    buy.onclick=function(){
+	    	rush.style.display='block';
+	    }
+	    rush_one.onclick=function(){
+	    	rush.style.display='none';
+	    }
+	    rush_two.onclick=function(){
+	    	rush.style.display='none';
+	    }
+	    rush_x.onclick=function(){
+	    	rush.style.display='none';
+	    }
+	    /*加购数量的加减*/
+	    var addnum=document.getElementById('addnum');
+	    var minusnum=document.getElementById('minusnum');
+	    var changenum=document.getElementById('changenum');
+	    var keep=document.getElementById('keep');
+	    addnum.onclick=function(){
+	    	if(changenum.value>=6){
+	    		alert("已达到最大库存，商品数量不够了！")
+	    	}else{
+	    		changenum.value++;
+	    	}
+	    	keep.innerHTML='';
+	    	var str="件（库存"+(6-changenum.value)+"件）";
+	    	var lastnum=document.createTextNode(str);
+	    	keep.appendChild(lastnum);
+	    }
+	    minusnum.onclick=function(){
+	    	if(changenum.value<=0){
+	    		alert("数量不能再减少了！")
+	    	}else{
+	    		changenum.value--;
+	    	}
+	    	keep.innerHTML='';
+	    	var str="件（库存"+(6-changenum.value)+"件）";
+	    	var lastnum=document.createTextNode(str);
+	    	keep.appendChild(lastnum);
+	    }
+	</script>
+</body>
+</html>
