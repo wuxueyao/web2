@@ -8,10 +8,40 @@
 		li{
 			list-style: none;
 		}
-		#slider{
+		#bottle{
+			width: 410px;
+			height: 410px;
+			border:solid 1px #d0cdc7;
+			padding:0;
+			float: left;
+			position: relative;
+		}
+		#simg{
+			width: 410px;
+			height: 410px;
+			border:solid 1px #d0cdc7;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		#lost{
+			width: 410px;
+			height: 410px;
+			background: #fff;
+			border:solid 1px #d0cdc7;
+			margin:20px 0 0 432px;
+			padding:0;
+			position: absolute;
+			/*z-index: 100;*/
+			display: none;
+			overflow: hidden;
+		}
+		#sliderx{
 			width:150px;
 			height:150px;
 			position:absolute;
+			left: 0;
+			top: 0;
 			background:#ccc;
 			opacity:0.4;
 			cursor: move;
@@ -111,8 +141,10 @@
 			<div style="width: 997px;height: 633px;float: left;background-color: #fff;">
 				<div class="white_left">
 					<div id="bottle">
-						<img src="images/pp0.jpeg"/>
-						<div id="slider"></div>
+						<div id="simg">
+							<img src="images/pp0.jpeg" id="come" />
+							<div id="sliderx"></div>
+						</div>
 					</div>
 					<div class="road">
 						<img style="float: left;" src="images/spanl.jpg">
@@ -121,10 +153,10 @@
 						<img style="float: right;" src="images/spanr.jpg"/>
 					</div>
 				</div>
+				<!--灰色区的文字区 -->
 				<div id="lost">
 					<img width="816" height="816" src="images/pp0.jpeg" id="Bimg">
 				</div>
-				<!--灰色区的文字区 -->
 				<div class="white_right">
 					<div class="letters">
 						<p style="font-size: 16px;font-weight: bold;margin:0;line-height: 25px;">韩国 RE:CIPE 水晶清爽防水防晒喷雾SPF50 150ml/瓶</p>
@@ -278,28 +310,6 @@
 				}
 			}
 		}
-		var bottle=document.getElementById('bottle');
-		var yellow=document.getElementById('yellow');
-		var blue=document.getElementById('blue');
-		var Bimg=document.getElementById('Bimg');
-		yellow.onclick=function exchange(){
-			yellow.style.border='solid 2px #ff9003';
-			blue.style.border='';
-			bottle.innerHTML="";
-			var img=document.createElement('img');
-			img.src="images/pp0.jpeg";
-			bottle.appendChild(img);
-			Bimg.src='images/pp0.jpeg';
-		}
-		blue.onclick=function again(){
-			blue.style.border='solid 2px #ff9003';
-			yellow.style.border='';
-			bottle.innerHTML="";
-			var img=document.createElement('img');
-			img.src="images/pp1.jpeg";
-			bottle.appendChild(img);
-			Bimg.src='images/pp1.jpeg';
-		}
 		/*化妆品规格*/
 		var litter=document.getElementById('five');
 		var most=document.getElementById('ten');
@@ -324,40 +334,46 @@
 		}
 		/*放大镜*/
 		var bottle=document.getElementById('bottle');
-		var slider=document.getElementById('slider');
+		var slider=document.getElementById('sliderx');
 		var lost=document.getElementById('lost');
-		bottle.onmouseover=function(){
+		var simg=document.getElementById('simg');
+		var Bimg=document.getElementById('Bimg');
+		simg.onmouseover=function(){
 			slider.style.display='block';
 			lost.style.display='block';
 		}
-		bottle.onmouseout=function(){
+		simg.onmouseout=function(){
 			slider.style.display='none';
 			lost.style.display='none';
 		}
-		bottle.onmousemove=function(ev){
+		simg.onmousemove=function(ev){
 			var oL=ev.clientX-bottle.offsetLeft-slider.offsetWidth/2;
 			var oT=ev.clientY-bottle.offsetTop-slider.offsetHeight/2;
-			var oMaxw=bottle.offsetWidth-slider.offsetWidth;
-			var oMaxh=bottle.offsetHeight-slider.offsetHeight;
-			oL=oL>oMaxw?oMaxw:oL<0?0:oL;
-			oT=oT>oMaxh?oMaxh:oT<0?0:oT;
-			var x=ev.clientX-slider.offsetWidth/2;
-			var y=ev.clientY+slider.offsetHeight/2;
-			if(x<100){
-				x=100;
-			}else if(x>380){
-				x=380;
-			}
-			if(y<100){
-				y=100;
-			}else if(y>520){
-				y=520;
-			}
-			slider.style.left=x+'px';
-			slider.style.top=y+'px';
-			var scale=-Bimg.offsetHeight/bottle.offsetHeight;
-			Bimg.style.left=oL*scale+'px';
-			Bimg.style.top=oT*scale+'px';
+			var maxLeft=simg.offsetWidth-slider.offsetWidth;
+			var maxTop=simg.offsetHeight-slider.offsetHeight;
+			oL=oL>maxLeft?maxLeft:oL<0?0:oL;
+			oT=oT>maxTop?maxTop:oT<0?0:oT;
+			slider.style.left=oL+'px';
+			slider.style.top=oT+'px';
+			var scale=Bimg.offsetHeight/simg.offsetHeight;
+			Bimg.style.left=-oL*scale+'px';
+			Bimg.style.top=-oT*scale+'px';
+		}
+		/*选图片*/
+		var yellow=document.getElementById('yellow');
+		var blue=document.getElementById('blue');
+		var come=document.getElementById('come');
+		yellow.onclick=function exchange(){
+			yellow.style.border='solid 2px #ff9003';
+			blue.style.border='';
+			come.src="images/pp0.jpeg";
+			Bimg.src='images/pp0.jpeg';
+		}
+		blue.onclick=function again(){
+			blue.style.border='solid 2px #ff9003';
+			yellow.style.border='';
+			come.src="images/pp1.jpeg";
+			Bimg.src='images/pp1.jpeg';
 		}
 		/*加购后弹出框*/
 		var buy=document.getElementById('buy');
