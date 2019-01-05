@@ -304,6 +304,7 @@
 			window.onscroll=function(){
 				var st=document.documentElement.scrollTop || document.body.scrollTop;
 				if(st>180){
+					cover.style.top=0;
 					cover.style.position='fixed';
 				}else{
 					cover.style.position='static';
